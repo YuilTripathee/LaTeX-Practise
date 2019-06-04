@@ -1,0 +1,84 @@
+\documentclass[a4paper]{article}
+
+% For inserting images
+\usepackage{graphicx}
+
+% For positioning figure
+\usepackage{float}
+
+% For page indentation
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+%  MIT style margin 
+%\addtolength{\oddsidemargin}{-0.875in}
+%\addtolength{\evensidemargin}{-0.875in}
+%\addtolength{\textwidth}{1.75in}
+%\addtolength{\topmargin}{-.875in}
+%\addtolength{\textheight}{1.75in}
+
+\title{My first document}
+\date{2019-04-06}
+\author{Yuil Tripathee}
+
+% start of document
+\begin{document}
+	% basic configuration
+	\pagenumbering{arabic}
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	\listoffigures
+	\listoftables
+	\newpage
+	% first section
+	\section{Section 1}
+	
+	Hello World
+	\[ v^2 = rgtan\theta \]
+	
+	\subsection{Sub section 1}
+	
+	Structuring a document is easy
+	
+	\begin{equation}\label{key}
+	\int_a^b \sin \pi x~dx = \sum_{n=0}^{\infty} \theta^n
+	\end{equation}
+	
+	
+	\subsubsection{Sub sub section 1}
+	
+	\paragraph{Paragraph}
+	
+	Some more text.
+	
+	\subparagraph{Sub paragraph}
+	
+	Even more text
+	
+	\section{Another section}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{images/docker_app_operation}
+		\caption[Operating an app with docker]{Operating an app with docker}
+		\label{fig:dockerappoperation}
+	\end{figure}
+
+	\paragraph{Again a paragraph}
+	Random citation \cite{DUMMY:1} embedded in text.
+	
+	\newpage	
+	
+	
+	\bibliography{document.bib}
+
+	
+	
+\end{document}
