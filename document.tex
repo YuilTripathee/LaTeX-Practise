@@ -15,6 +15,9 @@
 	top=20mm,
 }
 
+% for bibliography
+\usepackage{bibref}
+
 %  MIT style margin 
 %\addtolength{\oddsidemargin}{-0.875in}
 %\addtolength{\evensidemargin}{-0.875in}
@@ -30,10 +33,13 @@
 \begin{document}
 	% basic configuration
 	\pagenumbering{arabic}
+	
 	\maketitle
 	\newpage
+	
 	\tableofcontents
 	\newpage
+	
 	\listoffigures
 	\listoftables
 	\newpage
@@ -41,7 +47,7 @@
 	\section{Section 1}
 	
 	Hello World
-	\[ v^2 = rgtan\theta \]
+	\[ v^2 = rg\tan \theta \]
 	
 	\subsection{Sub section 1}
 	
@@ -61,7 +67,7 @@
 	\subparagraph{Sub paragraph}
 	
 	Even more text
-	
+	\newpage
 	\section{Another section}
 	
 	\begin{figure}[H]
@@ -72,13 +78,25 @@
 	\end{figure}
 
 	\paragraph{Again a paragraph}
-	Random citation \cite{DUMMY:1} embedded in text.
+	Random citation \cite{DUMMY:1} embedded in text.\cite{DUMMY:2}
+	
+	This is some example text \footnote{\label{myFootnote} Hello  footnote}.
+	
+	I'm referring to footnote \ref{myFootnote}.
+	
+	\begin{tabular}{|c|c|}
+		\hline 
+		hello & hello \\ 
+		\hline 
+		hi & hi \\ 
+		\hline 
+	\end{tabular} 
+	
+	\newpage
+	\section{Organic Chemistry}
+	
 	
 	\newpage	
-	
-	
 	\bibliography{document.bib}
-
-	
 	
 \end{document}
